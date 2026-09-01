@@ -1,3 +1,4 @@
+PALABRA PRUEBA
 # 🧪 Ejercicio 1 — Preparar una configuración de Terraform para HCP Terraform
 
 Este ejercicio introduce los conceptos básicos de **Terraform** mediante la
