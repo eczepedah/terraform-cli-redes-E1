@@ -1,6 +1,6 @@
 variable "project_id" {
   description = "ID GCP Project"
-  type       = string
+  type        = string
 }
 
 variable "region" {
@@ -10,12 +10,12 @@ variable "region" {
 }
 
 variable "bucket_name" {
- description = "bucket"
-  type = string
+  description = "bucket"
+  type        = string
 }
 
 variable "location" {
   description = "ubicación del bucket"
-  type = string
+  type        = string
 }
 
