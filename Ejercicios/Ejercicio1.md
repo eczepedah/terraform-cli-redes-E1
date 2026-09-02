@@ -282,4 +282,4 @@ No ejecutes `terraform apply` ni `terraform destroy` desde tu equipo; esas
 operaciones se realizarán posteriormente desde HCP Terraform.
 
 No subas credenciales, llaves JSON ni información sensible al repositorio.
-
+mdcastrop-1
