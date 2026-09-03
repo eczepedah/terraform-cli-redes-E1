@@ -1,5 +1,7 @@
 # 🧪 Ejercicio 1 — Preparar una configuración de Terraform para HCP Terraform
 
+Jose Antonio Barron
+
 Este ejercicio introduce los conceptos básicos de **Terraform** mediante la
 preparación de una configuración para un futuro despliegue en **HCP Terraform**.
 La infraestructura no se desplegará desde este laboratorio.
