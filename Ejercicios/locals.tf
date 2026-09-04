@@ -1,9 +1,6 @@
 locals {
-nombre
-local = expresión
-_
+#nombre = "Mi recurso CBMTZA"
 # ejemplo:
 # owner = var.equipo
 # environment = "produccion"
 }
-...
