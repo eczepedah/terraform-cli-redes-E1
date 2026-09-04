@@ -1,6 +1,7 @@
 # Recursos principales
-resource "<tipo_de_recurso>"
-"<nombre_logico>" {
-Es el núcleo del proyecto
-Puede dividirse por dominio o componente
+resource "google_storage_bucket" "bucket" {
+  name          = var.bucket_name
+  location      = var.location
+  force_destroy = true
+}
 # argumentos del recurso
