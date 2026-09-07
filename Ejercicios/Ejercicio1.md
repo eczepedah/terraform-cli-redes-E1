@@ -6,7 +6,7 @@ La infraestructura no se desplegará desde este laboratorio.
 
 La intención es que aprendas el flujo de validación de Terraform CLI y prepares
 el código que posteriormente ejecutará HCP Terraform.
-
+mnn:
 ---
 
 # 🎯 Objetivo
