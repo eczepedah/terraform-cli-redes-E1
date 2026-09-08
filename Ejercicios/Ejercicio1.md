@@ -283,3 +283,5 @@ operaciones se realizarán posteriormente desde HCP Terraform.
 
 No subas credenciales, llaves JSON ni información sensible al repositorio.
 
+Erick Y Herrera G
+
