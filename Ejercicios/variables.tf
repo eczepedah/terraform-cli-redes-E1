@@ -6,7 +6,6 @@ variable "project_id" {
 variable "region" {
   description = "GCP Region"
   type        = string
-  default     = "us_central"
 }
 
 variable "bucket_name" {
@@ -15,6 +14,6 @@ variable "bucket_name" {
 }
 
 variable "location" {
-  description = "ubicación del bucket"
+  description = "Ubicación del bucket"
   type        = string
 }
