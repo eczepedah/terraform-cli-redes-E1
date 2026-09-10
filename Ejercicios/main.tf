@@ -1,5 +1,5 @@
-# Recursos principales
-resource "<tipo_de_recurso>"
-"<nombre_logico>" {
-# argumentos del recurso
+resource "google_storage_bucket" "bucket" {
+  name          = var.bucket_name
+  location      = var.location
+  force_destroy = true
 }
