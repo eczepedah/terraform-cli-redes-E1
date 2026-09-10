@@ -1,6 +1,4 @@
 provider "google" {
-argumentos...
-# ejemplo:
-# region = var.region
-# project = var.project_id
+  project = var.project_id
+  region  = var.region
 }
