@@ -5,8 +5,7 @@ variable "project_id" {
 
 variable "region" {
   type        = string
-  description = "Región predeterminada"
-  default     = "us-central1"
+  description = "Región predeterminada":
 }
 
 variable "bucket_name" {
