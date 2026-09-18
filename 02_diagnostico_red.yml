@@ -1,0 +1,23 @@
+---
+- name: 02 - Pruebas de conectividad y resolucion de red
+  hosts: cdn
+  gather_facts: no
+
+  tasks:
+    - name: Probar conectividad IP (Ping a Google DNS)
+      ansible.builtin.command: ping -c 2 8.8.8.8
+      register: resultado_ping
+
+    - name: Mostrar resumen del Ping
+      ansible.builtin.debug:
+        msg: "{{ resultado_ping.stdout_lines }}"
+
+    - name: Validar acceso HTTP a un servicio público (CDN de prueba)
+      ansible.builtin.uri:
+        url: https://1.1.1.1
+        status_code: 200
+      register: resultado_http
+
+    - name: Confirmar que la salida a Internet funciona
+      ansible.builtin.debug:
+        msg: "Respuesta de CDN/DNS Cloudflare exitosa con codigo: {{ resultado_http.status }}"

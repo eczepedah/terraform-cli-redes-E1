@@ -1,0 +1,37 @@
+---
+- name: 04 - Reto Playbook de entrenamiento salud red
+  hosts: cdn
+  gather_facts: true
+
+  tasks:
+    - name: Probar conectividad IP (Ping a Google DNS)
+      ansible.builtin.command: ping -c 3 8.8.8.8
+      register: resultado_ping
+
+    - name: Mostrar resumen del Ping
+      ansible.builtin.debug:
+        msg: "{{ resultado_ping.stdout_lines }}"
+
+    - name: Prueba de URL - Validar conectividad HTTPS a Google
+      ansible.builtin.uri:
+        url: https://www.google.com
+        status_code: 200
+      register: uri_result
+
+    - name: Guardar estado de la maquina en un archivo
+      ansible.builtin.copy:
+       dest: "./reporte_salud_cmartinez.txt"
+       content: |
+          ==================================================
+                 REPORTE DE AUDITORIA DE RED (LOCAL)
+          ==================================================
+          Fecha: {{ ansible_date_time.date }} - {{ ansible_date_time.time }}
+          Equipo auditado: {{ inventory_hostname }}
+          Estado de Internet: {{ uri_result.status }}
+          ==================================================
+    - name: Mostrar resumen del Ping
+      ansible.builtin.debug:
+        msg: "{{ resultado_ping.stdout_lines }}"
+    - name: Notificar finalizacion
+      ansible.builtin.debug:
+       msg: "El reporte fue generado en el archivo 'reporte_salud_cmartinez.txt'"

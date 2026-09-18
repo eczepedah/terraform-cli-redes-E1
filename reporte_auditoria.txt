@@ -1,0 +1,9 @@
+==================================================
+       REPORTE DE AUDITORIA DE RED (LOCAL)
+==================================================
+Fecha: 2026-09-18 - 09:15:19
+Equipo auditado: sw-dist-1
+Direccion IP principal: 192.168.100.212
+Hostname real: 820KH4FRW374Q
+Arquitectura: arm64
+==================================================

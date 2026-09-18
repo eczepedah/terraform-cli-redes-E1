@@ -1,0 +1,12 @@
+---
+- name: 01 - Mi primer Playbook de entrenamiento
+  hosts: red_central
+  gather_facts: no  # Desactiva recolección profunda para responder rápido
+
+  tasks:
+    - name: Tarea 1 - Probar ejecucion en el nodo simulado
+      ansible.builtin.ping:
+
+    - name: Tarea 2 - Mostrar un mensaje en la terminal
+      ansible.builtin.debug:
+        msg: "Ejecutando verificacion en el equipo de casa {{ inventory_hostname }}"

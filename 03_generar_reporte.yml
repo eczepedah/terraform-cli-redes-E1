@@ -1,0 +1,23 @@
+---
+- name: 03 - Auditoria automatica y reporte de red
+  hosts: distribucion
+  gather_facts: yes  # Recopila datos de red de la maquina (IPs, interfaces, etc.)
+
+  tasks:
+    - name: Guardar estado de la maquina en un archivo
+      ansible.builtin.copy:
+        dest: "./reporte_auditoria.txt"
+        content: |
+          ==================================================
+                 REPORTE DE AUDITORIA DE RED (LOCAL)
+          ==================================================
+          Fecha: {{ ansible_date_time.date }} - {{ ansible_date_time.time }}
+          Equipo auditado: {{ inventory_hostname }}
+          Direccion IP principal: {{ ansible_default_ipv4.address | default('N/A') }}
+          Hostname real: {{ ansible_hostname }}
+          Arquitectura: {{ ansible_architecture }}
+          ==================================================
+
+    - name: Notificar finalizacion
+      ansible.builtin.debug:
+        msg: "El reporte fue generado en el archivo 'reporte_auditoria Cesar.txt'"
