@@ -1,7 +1,7 @@
 variable "project_id" {
   description = "ID GCP Project"
   type        = string
-#  default     = "prj-tZPhSUiD2qP3hT8t"
+  default     = "prj-tZPhSUiD2qP3hT8t"
 }
 
 variable "region" {
@@ -13,9 +13,12 @@ variable "region" {
 variable "bucket_name" {
   description = "bucket"
   type        = string
+  default = "My Bucket fallido"
 }
 
 variable "location" {
   description = "ubicación del bucket"
   type        = string
+  default     = "us_central1"
+
 }
